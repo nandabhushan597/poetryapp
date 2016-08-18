@@ -1,3 +1,8 @@
 
 <h1> SLAM </h1>
 <p> poetry events & meetups near you </p>
+<%= form_tag(search_path, method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>

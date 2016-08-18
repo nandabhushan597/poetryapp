@@ -28,8 +28,11 @@ gem 'twitter-bootstrap-rails'
 gem 'simple_form' 
 #Devise  
 gem 'devise' 
-#Rest Client 
-gem  'rest-client'
+# #Rest Client 
+gem 'httparty'
+# gem  'rest-client'
+# figaro for secret keys
+gem 'figaro'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -40,7 +43,8 @@ gem  'rest-client'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+  gem 'byebug', platform: :mri 
+  gem 'pry-rails'
 end
 
 group :development do

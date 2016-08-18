@@ -1,2 +1,7 @@
-<h1>Events#details</h1>
-<p>Find me in app/views/events/details.html.erb</p>
+<h1><%= @event_info ["Name"] %></h1> 
+<p> Details: <%= @event_info["Description"] %></p>
+<%= simple_form_for([current_user, current_user.events.build]) do |f| %>
+	<%= f.hidden_field :title, :value => @event_info["Title"] %>
+	<%= f.hidden_field :year, :value => @event_info["Year"] %> 
+<% end %> 
+<%= link_to 'Back', :back %
